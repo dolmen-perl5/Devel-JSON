@@ -65,8 +65,8 @@ If you use this module from the command-line, the last value of your one-liner
 The output will be either UTF-x (UTF-8, UTF-16...) or just ASCII, depending on
 your locale (check `LC_CTYPE` on Unix or GNU).
 
-As a conveniency (because you may want to deal with non-ASCII content in your
-C<-e> source), your code is converted from bytes uting the current locale.
+As a convenience (because you may want to deal with non-ASCII content in your
+C<-e> source), your code is converted from bytes using the current locale.
 
 The following L<JSON> options are enabled by default:
 
