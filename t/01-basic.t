@@ -13,8 +13,10 @@ $ENV{PERL5LIB} = join($Config{path_sep},
     'lib'
 );
 
+note "PERL5LIB=$ENV{PERL5LIB}";
+
 open my $stdin, '<', File::Spec->devnull;
-open my $stdout, '>', IO::Handle->new;
+my $stdout = IO::Handle->new;
 my $pid = open3 $stdin, $stdout, '>&STDOUT',
 	    $^X, '-d:JSON=-pretty', '-e', '[1]';
 binmode $stdout, ':crlf' if $^O eq 'MSWin32';
