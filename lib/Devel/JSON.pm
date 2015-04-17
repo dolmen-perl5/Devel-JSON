@@ -36,7 +36,7 @@ use Filter::Simple sub {
     $_ = Encode::decode($locale_enc, $_, Encode::FB_CROAK)
 	unless utf8::is_utf8($_);
 
-    $_ = 'print JSON::MaybeXS->new(pretty => 1, canonical => 1, allow_nonref => 1, @Devel::JSON::JSON_options)->encode(do {use utf8;'. $_ . '})'
+    $_ = 'print JSON::MaybeXS->new(pretty => 1, canonical => 1, allow_nonref => 1, @Devel::JSON::JSON_options)->encode(scalar do {use utf8;'. $_ . '})'
 };
 
 1;
@@ -62,7 +62,8 @@ Devel::JSON - Easy JSON output for one-liners
 =head1 DESCRIPTION
 
 If you use this module from the command-line, the last value of your one-liner
-(C<-e>) code will be serialized as JSON data.
+(C<-e>) code will be serialized as JSON data. The expression is evaluated in
+scalar context.
 
 The output will be either UTF-x (UTF-8, UTF-16...) or just ASCII, depending on
 your locale (check `LC_CTYPE` on Unix or GNU).
