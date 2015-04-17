@@ -1,6 +1,8 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
+	Major fix: the expression is now evaluated in scalar context.
+	POD fixes.
 	Fixed 'Changes' and dzil release stuff.
 
 0.900     2015-04-17 00:46:40+01:00 Europe/Berlin

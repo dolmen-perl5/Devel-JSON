@@ -57,7 +57,11 @@ Devel::JSON - Easy JSON output for one-liners
         3
     ]
 
-    $ perl -d:JSON -e ''
+    $ perl -d:JSON -e '{b => 2, c => 4}'
+    {
+        "b": 2,
+        "c": 4
+    }
 
 =head1 DESCRIPTION
 
@@ -83,7 +87,8 @@ The following L<JSON> options are enabled by default:
 
 =back
 
-You can enable more options by giving import arguments:
+You can enable more options by giving import arguments (a '-' prefix
+disables the option):
 
     # Force ASCII output
     $ perl -d:JSON=ascii -e '[1..3]'
@@ -95,6 +100,9 @@ You can enable more options by giving import arguments:
     $ perl -d:JSON=ascii -e '"Mengué"'
     "Mengu\u00e9"
 
+=head1 SEE ALSO
+
+L<JSON>, L<JSON::MaybeXS>, L<json-to> (L<App::JSON::to>).
 
 =head1 AUTHOR
 
