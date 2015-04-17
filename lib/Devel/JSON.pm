@@ -3,7 +3,7 @@ use warnings;
 
 package Devel::JSON;
 
-our $VERSION = '0.901';
+our $VERSION = '0.902';
 
 # Just to allow to be loaded with -d:JSON
 sub DB::DB {}
