@@ -1,5 +1,8 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
+	Fixed 'Changes' and dzil release stuff.
+
+0.900     2015-04-17 00:46:40+01:00 Europe/Berlin
 	Initial working code. Made during the Perl QA Hackathon 2015.
 	Released from the c-base hackerspace in Berlin.
