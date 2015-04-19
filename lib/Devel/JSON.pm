@@ -70,7 +70,7 @@ If you use this module from the command-line, the last value of your one-liner
 scalar context.
 
 The output will be either UTF-x (UTF-8, UTF-16...) or just ASCII, depending on
-your locale (check `LC_CTYPE` on Unix or GNU).
+your locale (check C<LC_CTYPE> on Unix or GNU).
 
 As a convenience (because you may want to deal with non-ASCII content in your
 C<-e> source), your code is converted from bytes using the current locale.
@@ -93,7 +93,7 @@ disables the option):
     # Force ASCII output
     $ perl -d:JSON=ascii -e '[1..3]'
 
-    # Disable pretty (note '-' before the name
+    # Disable pretty (note '-' before the name)
     $ perl -d:JSON=-pretty -e '[1..3]'
 
     # Non-ASCII in -e
