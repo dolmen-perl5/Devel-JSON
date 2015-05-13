@@ -1,9 +1,8 @@
 # Note that this file is named ".appveyor.yml", not "appveyor.yml"
 # so it must be explicitely defined in AppVeyor settings
 
-
-
 version: 1.0.{build}
+
 install:
 - perl -V
 - 'echo Starting install at: & time /t'
@@ -17,13 +16,12 @@ install:
 - cpanm Encode
 - 'echo End intall at: & time /t'
 
-before_build:
-- chcp
 
 # Use test_script instead
-build: false
+build: off
 
 test_script:
+- chcp
 - prove -lv t
 
 verbosity: minimal
