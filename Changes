@@ -1,6 +1,7 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
+	Fix dependencies: requires Encode 2.73.
 
 0.901     2015-04-17 08:30:06+02:00 Europe/Paris
 	Major fix: the expression is now evaluated in scalar context.

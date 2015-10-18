@@ -12,7 +12,7 @@ use JSON::MaybeXS ();
 
 our @JSON_options;
 
-use Encode ();
+use Encode 2.73 (); # Includes my patch for local encoding
 use encoding ();
 my $locale_enc = encoding::_get_locale_encoding;
 
