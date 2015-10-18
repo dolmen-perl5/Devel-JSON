@@ -1,6 +1,8 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
+
+0.902     2015-10-19 00:07:39+02:00 Europe/Paris
 	Fix dependencies:
 	- Encode 2.05 required, 2.73 recommended
 	- JSON::MaybeXS 1.003004 recommended
