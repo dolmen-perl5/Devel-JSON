@@ -12,7 +12,9 @@ use JSON::MaybeXS ();
 
 our @JSON_options;
 
-use Encode 2.73 (); # Includes my patch for local encoding
+# 2.05: _get_locale_encoding appeared in encoding.pm
+# 2.73: includes my patch for locale encoding on Win32
+use Encode 2.05 ();
 use encoding ();
 my $locale_enc = encoding::_get_locale_encoding;
 

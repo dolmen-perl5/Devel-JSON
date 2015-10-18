@@ -1,7 +1,9 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
-	Fix dependencies: requires Encode 2.73.
+	Fix dependencies:
+	- Encode 2.05 required, 2.73 recommended
+	- JSON::MaybeXS 1.003004 recommended
 
 0.901     2015-04-17 08:30:06+02:00 Europe/Paris
 	Major fix: the expression is now evaluated in scalar context.
