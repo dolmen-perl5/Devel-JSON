@@ -18,7 +18,7 @@ use Encode 2.05 ();
 use encoding ();
 my $locale_enc = encoding::_get_locale_encoding;
 
-if ($locale_enc =~ /UTF/i) { # Native JSON encoding
+if (defined($locale_enc) && $locale_enc =~ /UTF/i) { # Native JSON encoding
     binmode(STDOUT, ":encoding($locale_enc)")
 } else {
     @JSON_options = (ascii => 1)
@@ -36,7 +36,7 @@ use Filter::Simple sub {
     # As getting proper source encoding can be tricky on the command line
     # let's convert bytes to the locale encoding: DWIM
     $_ = Encode::decode($locale_enc, $_, Encode::FB_CROAK)
-	unless utf8::is_utf8($_);
+	if defined($locale_enc) && !utf8::is_utf8($_);
 
     $_ = 'print JSON::MaybeXS->new(pretty => 1, canonical => 1, allow_nonref => 1, @Devel::JSON::JSON_options)->encode(scalar do {use utf8;'. $_ . '})'
 };
