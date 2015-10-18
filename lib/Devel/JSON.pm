@@ -65,6 +65,16 @@ Devel::JSON - Easy JSON output for one-liners
         "c": 4
     }
 
+Default output encoding is UTF-x if this is the charset of the locale:
+
+    $ perl -d:JSON -e "qq<\N{SNOWMAN}>"
+    "☃"
+
+Force ASCII output:
+
+    $ perl -d:JSON=ascii -e "qq<\N{SNOWMAN}>"
+    "\u2603"
+
 =head1 DESCRIPTION
 
 If you use this module from the command-line, the last value of your one-liner

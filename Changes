@@ -6,6 +6,7 @@ Revision history for Devel::JSON
 	- JSON::MaybeXS 1.003004 recommended
 	Fix for environments where locale encoding detection (by
 	  &encoding::_get_locale_encoding) fails.
+	Doc: output encoding is now documented in SYNOPSIS.
 
 0.901     2015-04-17 08:30:06+02:00 Europe/Paris
 	Major fix: the expression is now evaluated in scalar context.
