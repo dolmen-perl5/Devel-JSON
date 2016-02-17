@@ -1,6 +1,8 @@
 Revision history for Devel::JSON
 
 {{$NEXT}}
+	Dependencies: require Encode 2.73 on MSWin32 and netbsd.
+	Spéciale dédicace à Andéol !
 
 0.902     2015-10-19 00:07:39+02:00 Europe/Paris
 	Fix dependencies:
