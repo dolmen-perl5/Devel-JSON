@@ -3,7 +3,7 @@ use warnings;
 
 package Devel::JSON;
 
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 # Just to allow to be loaded with -d:JSON
 sub DB::DB {}
@@ -74,6 +74,11 @@ Force ASCII output:
 
     $ perl -d:JSON=ascii -e "qq<\N{SNOWMAN}>"
     "\u2603"
+
+Booleans:
+
+    $ perl -d:JSON -MJSON::PP -e 'JSON::PP::true'
+    true
 
 =head1 DESCRIPTION
 
