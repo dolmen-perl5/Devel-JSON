@@ -127,7 +127,7 @@ Olivier Mengué, L<mailto:dolmen@cpan.org>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright E<copy> 2015 Olivier Mengué.
+Copyright E<copy> 2017 Olivier Mengué.
 
 This is free software; you can redistribute it and/or modify it under the
 same terms as the Perl 5 programming language system itself.
