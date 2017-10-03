@@ -1,12 +1,15 @@
+package Devel::JSON;
+BEGIN {
+    # detect -d:JSON.  debugger features aren't needed, so disable them for speed.
+    if (!defined &DB::DB && $^P & 0x02) {
+        $^P = 0;
+    }
+}
+
 use strict;
 use warnings;
 
-package Devel::JSON;
-
 our $VERSION = '1.001';
-
-# Just to allow to be loaded with -d:JSON
-sub DB::DB {}
 
 use JSON::MaybeXS ();
 
